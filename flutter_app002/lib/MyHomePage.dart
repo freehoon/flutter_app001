@@ -8,6 +8,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   var _text = 'hello';
+  bool _status = true;
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +22,13 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
+          _status = !_status;
           setState(() {
-            _text = 'World';
+            if(_status){
+              _text = 'World';
+            } else {
+              _text = 'Hello';
+            }
           });
         },
         child: Icon(Icons.touch_app),
