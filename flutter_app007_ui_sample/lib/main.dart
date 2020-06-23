@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Icons.add,
               //color: Colors.black,
             ),
-            onPressed: (){},
+            onPressed: () {},
           )
         ],
       ),
@@ -77,6 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: Icon(Icons.account_circle),
           ),
         ],
+        selectedItemColor: Colors.amber[800],
       ),
     );
   }
