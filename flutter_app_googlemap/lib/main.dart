@@ -25,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   static final CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(37.575929, 126.976849),
-    zoom: 15.0,   //값이 클 수록 확대된다.
+    zoom: 17.0,   //값이 클 수록 확대된다.
   );
 
   static final CameraPosition _kLake = CameraPosition(
@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: GoogleMap(
-        mapType: MapType.hybrid,
+        mapType: MapType.normal,
         initialCameraPosition: _kGooglePlex,
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
